@@ -1,0 +1,26 @@
+@import "variables";
+
+%list-style{
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+%clearfix{
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.list{
+@extend %list-style;
+    &>li{
+        &>a{
+            text-decoration: none;
+        }
+    }
+    &-item{
+        color: blue;
+    }
+}
